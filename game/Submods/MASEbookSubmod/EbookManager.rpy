@@ -23,7 +23,10 @@ init -10 python in eb_books:
                 # 各章节信息list(章节，名称，页数)
                 'chapter_data':[]
             }
-    
+
         def create_config():
             with open(path+"/config.json", 'w') as config:
                 pass
+        
+        def split_txt():
+            
