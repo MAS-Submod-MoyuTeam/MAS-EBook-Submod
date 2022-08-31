@@ -13,3 +13,4 @@ init -900 python in eb_function:
             _filedir = eb_globals.ebook_path + "/{}".format(eb_utils.get_file_md5(_file))
             eb_utils.mkdir(_filedir)
             eb_utils.move_file(_file, _filedir)
+            os.rename(_filedir + "/" + i, _filedir + "/" +'original_text.txt')
