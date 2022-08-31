@@ -17,9 +17,10 @@ init -900 python in eb_utils:
             return False 
     def mkdir(path):
         try:
-            os.mkdir(path)
+            if not os.path.exists(path):
+                os.makedirs(path)
         except IOError:
-            pass
+            raise
     def move_file(src, dst):
         try:
             shutil.move(src, dst)

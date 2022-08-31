@@ -1,11 +1,11 @@
 init -900 python in eb_globals:
     import store
-    submod_path = renpy.config.basedir + "/game/Submods/MASEbookSubmods"
+    submod_path = renpy.config.basedir + "/game/Submods/MASEbookSubmod"
     ebook_path = submod_path + "/EBooks"
     check_path = renpy.config.basedir + "/characters"
 
     if renpy.android:
-        submod_path = renpy.config.basedir + "/game/Submods/MASEbookSubmods"
+        submod_path = renpy.config.basedir + "/game/Submods/MASEbookSubmod"
         ebook_path = submod_path + "/EBooks"
         check_path = renpy.config.basedir + "/characters"
         
