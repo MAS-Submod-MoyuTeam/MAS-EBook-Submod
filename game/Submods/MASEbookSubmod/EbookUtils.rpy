@@ -1,5 +1,5 @@
 init -900 python in eb_utils:
-    import shutil, os
+    import shutil, os, hashlib
     from store.mas_submod_utils import submod_log as submod_log
     def log_debug(str):
         submod_log.debug("[ebook] {}".format(str))
@@ -26,3 +26,16 @@ init -900 python in eb_utils:
         except Exception as e:
             log_error(e)
             raise e
+    def get_file_md5(path):
+        """
+        获取文件内容的MD5值
+        :param path: 文件所在路径
+        :return:
+        """
+        with open(path, 'rb') as file:
+            data = file.read()
+
+        diff_check = hashlib.md5()
+        diff_check.update(data)
+        md5_code = diff_check.hexdigest()
+        return md5_code
