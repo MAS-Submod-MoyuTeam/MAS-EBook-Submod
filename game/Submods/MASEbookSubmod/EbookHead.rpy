@@ -14,3 +14,17 @@ init -989 python:
             update_dir="",
             attachment_id=None
         )
+# animated_book
+# (760, 50) (1240, 680)
+image ebook_paper = "Submods/MASEbookSubmod/notebook.png"
+screen ebook_show(texts=[]):
+    viewport:
+        area (760, 50, 480, 630)
+        child_size (480, 630)
+        vbox:
+            box_wrap False
+            for text1 in texts:
+                hbox:
+                    text text1:
+                        font "gui/font/npy.ttf"
+                        size 10

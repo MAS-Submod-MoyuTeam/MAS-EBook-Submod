@@ -1,8 +1,10 @@
 init -900 python in eb_utils:
     import shutil, os, hashlib
+    import store.eb_globals as eb_globals
     from store.mas_submod_utils import submod_log as submod_log
     def log_debug(str):
-        submod_log.debug("[ebook] {}".format(str))
+        if eb_globals.debugmode:
+            submod_log.debug("[ebook] {}".format(str))
     def log_info(str):
         submod_log.info("[ebook] {}".format(str))
     def log_warn(str):

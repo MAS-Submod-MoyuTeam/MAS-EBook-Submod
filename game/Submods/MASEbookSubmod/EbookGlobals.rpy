@@ -11,3 +11,5 @@ init -900 python in eb_globals:
         
     # 待处理txt
     new_txt = []
+
+    debugmode = True
